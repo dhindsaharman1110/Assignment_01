@@ -1,20 +1,50 @@
+body{
+    height: 100%;
+    display: grid;
+    grid-template-columns: fit-content(15%) auto
+}
+
 header{
     background-color: rgb(102, 65, 65);
     text-align: center;
     padding:20px;
+    grid-column: 1/-1;
+}
+
+
+
+
+main{
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns:  0.15fr 0.85fr ;
 }
 
 .notes{
+    padding:15px;
     background-color: silver;
+    grid-column: 1/2;
 }
 
 .input{
+    padding: 15px;
     background-color: tan;
+    grid-column: 2/-1;
 }
+
 
 
 footer{
     background-color: rgb(236, 161, 148);
     text-align: center;
     padding: 10px;
+    grid-column: 1/-1;
 }
+
+footer > nav{
+   
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap
+}
+
