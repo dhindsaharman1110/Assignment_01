@@ -1,14 +1,16 @@
 body{
     height: 100%;
     display: grid;
-    grid-template-columns: fit-content(15%) auto
+    grid-template-columns: fit-content(15%) auto;
+    grid-gap: 10px;
 }
 
 header{
-    background-color: rgb(102, 65, 65);
+    background-color: rgba(126, 38, 38, 0.795);
     text-align: center;
     padding:20px;
     grid-column: 1/-1;
+    height: 50px;
 }
 
 
@@ -18,10 +20,13 @@ main{
     grid-column: 1/-1;
     display: grid;
     grid-template-columns:  0.15fr 0.85fr ;
+    grid-gap: 10px;
+    height: 100%;
 }
 
 .notes{
     padding:15px;
+    height:300px;
     background-color: silver;
     grid-column: 1/2;
 }
@@ -30,8 +35,16 @@ main{
     padding: 15px;
     background-color: tan;
     grid-column: 2/-1;
+    text-align: center;
+    
 }
 
+
+.input > .text1 >.textarea{
+    width: 85%;
+    height: 80%;
+    border-radius: 10px;
+}
 
 
 footer{
@@ -39,6 +52,7 @@ footer{
     text-align: center;
     padding: 10px;
     grid-column: 1/-1;
+    height: 100%;
 }
 
 footer > nav{
@@ -48,3 +62,43 @@ footer > nav{
     flex-wrap: nowrap
 }
 
+.button_1{
+    background-color: green;
+    color: wheat;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    float: left;
+
+}
+
+.button_2{
+    background-color: grey;
+    color: wheat;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    float: right;
+}
+
+.button_3{
+    background-color: green;
+    color: wheat;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.button_4{
+    background-color:red;
+    color: wheat;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+
+.input{
+    display:grid;
+
+}
