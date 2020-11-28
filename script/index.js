@@ -42,4 +42,21 @@ function change_theme(){
 }
 
 
+
+function cancel_every_thing(){
+    txt_area.value=" "
+    but_3.style.visibility='hidden'
+    but_4.style.visibility='hidden'
+}
+
+
+
+
+
+
 but_2.addEventListener("click", change_theme)
+
+
+but_4.addEventListener("click", cancel_every_thing)
+
+
