@@ -19,7 +19,7 @@ header{
 main{
     grid-column: 1/-1;
     display: grid;
-    grid-template-columns:  0.15fr 0.85fr ;
+    grid-template-columns:  0.30fr 0.95fr ;
     grid-gap: 10px;
     height: 100%;
 }
@@ -34,7 +34,7 @@ main{
 .input{
     padding: 15px;
     background-color: tan;
-    grid-column: 2/-1;
+    grid-column: 2;
     text-align: center;
     
 }
@@ -65,20 +65,22 @@ footer > nav{
 .button_1{
     background-color: green;
     color: wheat;
-    padding: 10px;
+    height: 50px;
+    
     border-radius: 10px;
-    position: relative;
-    float: left;
+    
+    
 
 }
 
 .button_2{
     background-color: grey;
     color: wheat;
-    padding: 10px;
+    height: 50px;
     border-radius: 10px;
-    position: relative;
-    float: right;
+    margin-left: auto;
+    
+    
 }
 
 .button_3{
@@ -101,4 +103,9 @@ footer > nav{
 .input{
     display:grid;
 
+}
+
+
+.upper_button{
+    display: flex;
 }
