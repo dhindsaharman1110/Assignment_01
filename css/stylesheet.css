@@ -109,3 +109,9 @@ footer > nav{
 .upper_button{
     display: flex;
 }
+
+
+ul>li>a{
+    text-decoration:none;
+    color: black;
+}
