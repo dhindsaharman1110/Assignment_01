@@ -12,9 +12,11 @@ let side_nav=document.querySelector("body > main > nav")
 
 let nav_element=document.querySelector("body > main > nav > ul")
 
-let nav_a=document.querySelector("#list_items>li a")
+// let nav_a=document.querySelector("#list_items>li a")
 
-let nav_a2=document.querySelector("#list_items > li:nth-child(2) > a")
+// let nav_a2=document.querySelector("#list_items > li:nth-child(2) > a")
+
+let nav_a3=document.querySelectorAll("#list_items li a")
 
 let nav_element_p=document.querySelector("body > main > nav  >p")
 
@@ -26,12 +28,7 @@ function change_theme(){
 
 
     if (but_2.innerHTML=="Dark Theme"){
-
         side_nav.style.backgroundColor= 'black'
-        nav_element.style.color='white'
-        nav_element_p.style.color='white'
-        nav_a.style.color='white'
-        nav_a2.style.color="white"
         input_area.style.backgroundColor='black'
         but_2.innerHTML="Light Theme"
         but_2.style.backgroundColor="silver"
@@ -40,9 +37,7 @@ function change_theme(){
 
     else {
 
-        side_nav.style.backgroundColor= 'silver'
-        nav_element.style.color='black'
-        nav_element_p.style.color='black'
+        side_nav.style.backgroundColor= 'grey'
         input_area.style.backgroundColor='tan'
         txt_area.style.backgroundColor= 'white'
         but_2.style.backgroundColor="grey"
@@ -90,12 +85,23 @@ function save_notes(){
     }
 
     temp_list.push(string_value)
+    let note_one={title: "note one" ,
+                  field: "These are the first notes with title 'note one"}
+    notesArray.push(note_one)
 
-    notesArray.push({"title": temp_list[0], "field": temp_list[1]})
-    console.log(notesArray)
+    let note_two={title: "note two" , field: "These are the second notes with title 'note two"}
+    notesArray.push(note_two)
+
+    let new_note={title: temp_list[0], field: temp_list[1]}
+    notesArray.push(new_note)
+
+    // txt_area.value=notesArray[2].field
     let item_entry=document.querySelector('#list_items')
     let entry=document.createElement('li')
     let anchor_entry=document.createElement('a')
+    let cls=document.createAttribute("class")
+    cls.value="triggerClass"
+    anchor_entry.setAttributeNode(cls)
     let att=document.createAttribute("href")
     att.value="#"
     anchor_entry.setAttributeNode(att)
@@ -104,9 +110,19 @@ function save_notes(){
     item_entry.appendChild(entry)
 
 
-    let element_note=
 
 
+
+    var elem =document.getElementsByClassName("triggerClass")
+    new_list=notesArray
+    console.log(new_list)
+    // console.log(elem.length)
+    for (var i=0; i<elem.length; i++){
+        elem[i].addEventListener("click", function(){
+            console.log(new_list[i])
+        }
+        )
+    }
 }
 
 
@@ -119,10 +135,14 @@ but_1.addEventListener("click",get_every_thing)
 
 but_3.addEventListener("click", save_notes)
 
-nav_a.addEventListener("click", function noteone(){
-    txt_area.value="These are the first notes with title 'note one'"
-})
+// nav_a.addEventListener("click", function noteone(){
+//     txt_area.value="These are the first notes with title 'note one'"
+// })
 
-nav_a2.addEventListener("click", function notetwo(){
-    txt_area.value="These are the second notes with title 'note two'"
-})
+// nav_a2.addEventListener("click", function notetwo(){
+//     txt_area.value="These are the second notes with title 'note two'"
+// })
+
+
+
+

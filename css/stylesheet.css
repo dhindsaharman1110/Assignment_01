@@ -27,8 +27,13 @@ main{
 .notes{
     padding:15px;
     height:300px;
-    background-color: silver;
+    background-color: grey;
+    color: khaki;
     grid-column: 1/2;
+}
+
+#list_items li a{
+    color:khaki
 }
 
 .input{
