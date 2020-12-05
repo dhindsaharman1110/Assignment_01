@@ -1,5 +1,5 @@
 body{
-    height: 100%;
+  
     display: grid;
     grid-template-columns: fit-content(15%) auto;
     grid-gap: 10px;
@@ -21,7 +21,7 @@ main{
     display: grid;
     grid-template-columns:  0.30fr 0.95fr ;
     grid-gap: 10px;
-    height: 100%;
+    
 }
 
 .notes{
@@ -30,6 +30,8 @@ main{
     background-color: grey;
     color: khaki;
     grid-column: 1/2;
+    
+    
 }
 
 #list_items li a{
@@ -107,6 +109,7 @@ footer > nav{
 
 .input{
     display:grid;
+   
 
 }
 
@@ -120,3 +123,12 @@ ul>li>a{
     text-decoration:none;
     color: black;
 }
+
+
+
+
+
+
+
+
+
